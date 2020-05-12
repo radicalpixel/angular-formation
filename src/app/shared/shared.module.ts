@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HighlightDirective } from './directives/highlight.directive';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 
 
 @NgModule({
   declarations: [
-    HighlightDirective
+    HighlightDirective,
+    TruncatePipe
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    HighlightDirective
+    HighlightDirective,
+    TruncatePipe
   ]
 })
 export class SharedModule { }
