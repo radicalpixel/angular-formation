@@ -1,7 +1,7 @@
 <h2>Animals list:</h2>
 <div *ngFor="let animal of animals;">
     <p>
-        <label><span class="title">name:</span><span class="value">{{animal.name}}</span></label>
+        <label><span class="title">name:</span><span class="value" appHighlight>{{animal.name}}</span></label>
         <label><span class="title">species:</span><span class="value">{{animal.species}}</span></label>
         <label><span class="title">veterinarian:</span><span class="value">{{animal.veterinarian}}</span></label>
         <label><span class="title">comment:</span><span class="value">{{animal.comment}}</span></label>

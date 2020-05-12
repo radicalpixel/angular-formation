@@ -4,17 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AnimalModule } from './animal/animal.module';
-import { HighlightDirective } from './shared/directives/highlight.directive';
+import { SharedModule } from './shared/shared.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HighlightDirective
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AnimalModule
+    AnimalModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

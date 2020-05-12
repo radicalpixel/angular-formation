@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from 'src/app/shared/api/model/animal';
 import { AnimalService } from 'src/app/shared/services/animal.service';
+import { HighlightDirective } from 'src/app/shared/directives/highlight.directive';
 
 
 

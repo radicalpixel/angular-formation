@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -9,7 +10,8 @@ import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
     AnimalDetailComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   exports: [
     AnimalDetailComponent
