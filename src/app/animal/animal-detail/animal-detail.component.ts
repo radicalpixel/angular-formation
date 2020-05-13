@@ -1,8 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Animal } from 'src/app/shared/api/model/animal';
 import { AnimalService } from 'src/app/shared/services/animal.service';
-
-
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -11,15 +10,14 @@ import { AnimalService } from 'src/app/shared/services/animal.service';
   styleUrls: ['./animal-detail.component.scss'],
 })
 export class AnimalDetailComponent implements OnInit {
-  @Input() animal: Animal;
-  @Output() delete = new EventEmitter<Animal>();
+  animal?: Animal;
+  
+  constructor(private route: ActivatedRoute, private service: AnimalService) { }
 
-  constructor(private service: AnimalService) { }
-
-  ngOnInit(): void { }
-
-  onDeleteClick(): void {
-    this.delete.emit(this.animal)
+  ngOnInit(): void { 
+    const id = this.route.snapshot.paramMap.get('id')
+    this.service.get(+id).subscribe({
+      next: animal => this.animal = animal
+    })
   }
-
 }

@@ -1,20 +1,21 @@
 <p>
+    <label>Fiche de détail:</label>
+</p>
+<p>
     <label>
         <span class="title">name:</span>
-        <span class="value" appHighlight>{{animal.name}}</span>
+        <span class="value" appHighlight>{{animal?.name}}</span>
     </label>
     <label>
         <span class="title">species:</span>
-        <span class="value">{{animal.species}}</span>
+        <span class="value">{{animal?.species}}</span>
     </label>
     <label>
         <span class="title">veterinarian:</span>
-        <span class="value">{{animal.veterinarian}}</span>
+        <span class="value">{{animal?.veterinarian}}</span>
     </label>
     <label>
         <span class="title">comment:</span>
-        <span class="value">{{animal.comment | truncate:15}}</span>
+        <span class="value">{{animal?.comment | truncate:180}}</span>
     </label>
-
-    <button class="action" (click)="onDeleteClick()">delete</button>
 </p>

@@ -16,6 +16,6 @@ export class HighlightDirective {
   }
 
   private transform(transform: string):void {
-  this.el.nativeElement.style['text-transform'] = transform;
+    this.el.nativeElement.style['text-transform'] = transform;
   }
 }

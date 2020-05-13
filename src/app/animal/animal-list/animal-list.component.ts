@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Animal } from 'src/app/shared/api/model/animal';
 import { AnimalService } from 'src/app/shared/services/animal.service';
 
+
 @Component({
   selector: 'app-animal-list',
   templateUrl: './animal-list.component.html',

@@ -1,0 +1,11 @@
+<p>
+    <a [routerLink]="['animal',animal.id]">
+        <span class="title">name:</span>
+        <span class="value">{{animal.name}}</span>
+    </a>
+    <label>
+        <span class="title">species:</span>
+        <span class="value">{{animal.species}}</span>
+    </label>
+    <button class="action" (click)="onDeleteClick()">delete</button>
+</p>

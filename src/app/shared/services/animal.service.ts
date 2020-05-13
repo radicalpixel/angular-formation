@@ -15,7 +15,7 @@ export class AnimalService {
   }
 
   get(id: number): Observable<Animal> {
-    return this.client.get<Animal>("/api/animals/${id}")
+    return this.client.get<Animal>(`/api/animals/${id}`)
   }
 
   delete(animal: Animal): Observable<void> {

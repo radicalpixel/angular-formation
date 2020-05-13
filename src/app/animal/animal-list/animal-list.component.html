@@ -1,8 +1,8 @@
 <h2>Animals list:</h2>
 <div>
-    <app-animal-detail 
+    <app-animal-item
     (delete)="onDelete($event)"
     [animal]="animal"
     *ngFor="let animal of animals;"
-    ></app-animal-detail>
+    ></app-animal-item>
 </div>
