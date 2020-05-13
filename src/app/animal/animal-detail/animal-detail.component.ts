@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Animal } from 'src/app/shared/api/model/animal';
 import { AnimalService } from 'src/app/shared/services/animal.service';
+
 
 
 
@@ -10,12 +11,15 @@ import { AnimalService } from 'src/app/shared/services/animal.service';
   styleUrls: ['./animal-detail.component.scss'],
 })
 export class AnimalDetailComponent implements OnInit {
-  animals: Animal[]
+  @Input() animal: Animal;
+  @Output() delete = new EventEmitter<Animal>();
 
   constructor(private service: AnimalService) { }
 
-  ngOnInit(): void {
-    this.animals = this.service.get()
+  ngOnInit(): void { }
+
+  onDeleteClick(): void {
+    this.delete.emit(this.animal)
   }
 
 }
