@@ -13,11 +13,18 @@ export class AnimalListComponent implements OnInit {
   constructor(private service: AnimalService) { }
 
   ngOnInit(): void {
-    this.animals = this.service.get()
+    this.refreshUi()
   }
 
   onDelete(animal: Animal): void {
-    console.log("onDeleteEvent()")
-    this.service.delete(animal)
+    this.service.delete(animal).subscribe({
+        next:undefined => this.refreshUi()
+    })
+  }
+
+  private refreshUi() {
+    this.service.getAll().subscribe({
+      next: animals => this.animals = animals
+    })
   }
 }
