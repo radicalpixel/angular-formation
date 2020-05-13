@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./animal-detail.component.scss'],
 })
 export class AnimalDetailComponent implements OnInit {
-  animal?: Animal;
+  animal: Animal;
   
   constructor(private route: ActivatedRoute, private service: AnimalService) { }
 
