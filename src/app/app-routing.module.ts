@@ -3,7 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'animals', pathMatch: 'full'},
+  { 
+    path: '',
+    redirectTo: 'animals',
+    pathMatch: 'full'
+  }, {
+    path: 'veterinarians',
+    loadChildren: () => import('./veterinarian/veterinarian.module').then( mod => mod.VeterinarianModule )
+  },
 ];
 
 @NgModule({

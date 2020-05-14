@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Animal } from 'src/app/shared/api/model/animal';
-import { AnimalService } from 'src/app/shared/services/animal.service';
 
 
 @Component({
@@ -12,7 +11,7 @@ export class AnimalItemComponent implements OnInit {
   @Input() animal: Animal;
   @Output() delete = new EventEmitter<Animal>();
 
-  constructor(private service: AnimalService) { }
+  constructor() { }
 
   ngOnInit(): void { }
 

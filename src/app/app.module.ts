@@ -12,7 +12,7 @@ import { AnimalModule } from './animal/animal.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AnimalModule,
+    AnimalModule
   ],
   providers: [],
   bootstrap: [AppComponent]
