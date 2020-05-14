@@ -17,4 +17,16 @@ export class VeterinarianService {
   get(id: number): Observable<Veterinarian> {
     return this.client.get<Veterinarian>(`/api/veterinarians/${id}`)
   }
+
+  create(veterinarian: Veterinarian): Observable<Veterinarian> {
+    return this.client.post<Veterinarian>("/api/veterinarians", veterinarian)
+  }
+
+  update(veterinarian: Veterinarian): Observable<Veterinarian> {
+    return this.client.put<Veterinarian>(`/api/veterinarians/${veterinarian.id}`, veterinarian)
+  }
+
+  delete(veterinarian: Veterinarian): Observable<void> {
+    return this.client.delete<void>(`/api/veterinarians/${veterinarian.id}`)
+  }
 }

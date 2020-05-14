@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Veterinarian } from 'src/app/shared/api/model/veterinarian';
 import { VeterinarianService } from 'src/app/shared/services/veterinarian.service';
 
@@ -12,12 +12,26 @@ import { VeterinarianService } from 'src/app/shared/services/veterinarian.servic
 export class VeterinarianDetailComponent implements OnInit {
   veterinarian: Veterinarian;
 
-  constructor(private route: ActivatedRoute, private service: VeterinarianService) { }
+  constructor(
+    private service: VeterinarianService,
+    private route: ActivatedRoute,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
     this.service.get(+id).subscribe({
       next: veterinarian => this.veterinarian = veterinarian
     })
+  }
+
+  onEdit() {
+    this.router.navigate([`/veterinarians/edit/${this.veterinarian.id}`])
+  }
+
+  onDelete() {
+    this.service.delete(this.veterinarian).subscribe(
+      () => this.router.navigate(["/veterinarians"])
+    )
   }
 }

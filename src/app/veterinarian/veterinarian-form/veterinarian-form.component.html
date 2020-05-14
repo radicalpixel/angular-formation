@@ -1,0 +1,5 @@
+<form [formGroup]="veterinarianForm" (ngSubmit)="onSubmit()">
+    <input placeholder="first name" formControlName="firstName" />
+    <input placeholder="last name" formControlName="lastName" />
+    <button type="submit">Add</button>
+</form>

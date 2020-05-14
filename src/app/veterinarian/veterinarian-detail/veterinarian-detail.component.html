@@ -1,4 +1,6 @@
 <h2>Fiche vétérinaire:</h2>
 <p *ngIf="veterinarian">
     <label>{{veterinarian.firstName}} {{veterinarian.lastName}}</label>
+    <button (click)="onEdit()">edit</button>
+    <button (click)="onDelete()">delete</button>
 </p>
