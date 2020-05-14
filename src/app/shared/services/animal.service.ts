@@ -19,6 +19,10 @@ export class AnimalService {
     return this.client.get<Animal>(`/api/animals/${id}`)
   }
 
+  create(animal: Animal): Observable<Animal> {
+    return this.client.post<Animal>("/api/animals", animal)
+  }
+
   delete(animal: Animal): Observable<void> {
     return this.client.delete<void>(`/api/animals/${animal.id}`)
   }

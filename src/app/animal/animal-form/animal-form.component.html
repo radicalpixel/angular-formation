@@ -1,0 +1,9 @@
+<form (ngSubmit)="onSubmit()">
+    <input placeholder="Nom" name="name" [(ngModel)]="animal.name">
+    <!-- combobox ?-->
+    <input placeholder="Espèce" name="specie" [(ngModel)]="animal.species">
+    <!-- combobox ?-->
+    <input placeholder="Vétérinaire" name="veteriarian" [(ngModel)]="animal.veterinarian">
+    <input placeholder="Commentaire" name="comment" [(ngModel)]="animal.comment">
+    <button type="submit">Add</button>
+</form>

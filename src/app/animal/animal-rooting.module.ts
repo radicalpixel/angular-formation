@@ -4,6 +4,7 @@ import { AnimalListComponent } from './animal-list/animal-list.component';
 import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { AnimalRootComponent } from './animal-root/animal-root.component';
 import { AnimalDetailResolverService } from './service/resolver/animal-detail-resolver.service';
+import { AnimalFormComponent } from './animal-form/animal-form.component';
 
 
 const animalRoutes: Routes = [{
@@ -12,6 +13,9 @@ const animalRoutes: Routes = [{
     { 
       path: '',
       component: AnimalListComponent
+    }, {
+      path: 'form',
+      component: AnimalFormComponent,
     }, {
       path: ':id',
       component: AnimalDetailComponent,

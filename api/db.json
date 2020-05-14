@@ -20,6 +20,13 @@
       "species": "fox-squirrel",
       "veterinarian": "Ged Épervier",
       "comment": "Très agité."
+    },
+    {
+      "name": "Baghera",
+      "species": "cat",
+      "veterinarian": "Mowgli",
+      "comment": "trois vives panthères...",
+      "id": 4
     }
   ],
   "veterinarians": [
