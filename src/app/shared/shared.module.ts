@@ -6,7 +6,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ChronometersInterceptor } from './interceptors/chronometers.interceptor';
 
 
-
 @NgModule({
   declarations: [
     HighlightDirective,

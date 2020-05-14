@@ -3,6 +3,7 @@ import { Animal } from 'src/app/shared/api/model/animal';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http'
 
+
 @Injectable({
   providedIn: 'root'
 })

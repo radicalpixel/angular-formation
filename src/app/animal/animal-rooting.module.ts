@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { AnimalListComponent } from './animal-list/animal-list.component';
 import { AnimalDetailComponent } from './animal-detail/animal-detail.component';

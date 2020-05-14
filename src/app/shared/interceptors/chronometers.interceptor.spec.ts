@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-
 import { ChronometersInterceptor } from './chronometers.interceptor';
+
 
 describe('ChronometersInterceptor', () => {
   beforeEach(() => TestBed.configureTestingModule({
