@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Veterinarian } from 'src/app/shared/api/model/veterinarian';
 import { VeterinarianService } from 'src/app/shared/services/veterinarian.service';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -29,8 +29,14 @@ export class VeterinarianFormComponent implements OnInit {
         }
 
         this.veterinarianForm = new FormGroup({
-          firstName: new FormControl(this.veterinarian.firstName),
-          lastName: new FormControl(this.veterinarian.lastName),
+          firstName: new FormControl(
+            this.veterinarian.firstName,
+            [Validators.required]
+          ),
+          lastName: new FormControl(
+            this.veterinarian.lastName,
+            [Validators.required]
+          ),
         });
       }
     )

@@ -1,5 +1,10 @@
 <form [formGroup]="veterinarianForm" (ngSubmit)="onSubmit()">
     <input placeholder="first name" formControlName="firstName" />
+    <p *ngIf="veterinarianForm.get('firstName').errors?.required">required field</p>
+
     <input placeholder="last name" formControlName="lastName" />
-    <button type="submit">Add</button>
+    <p *ngIf="">required field</p>
+    <p *ngIf="veterinarianForm.get('lastName').errors?.required">required field</p>
+
+    <button type="submit" [disabled]="veterinarianForm.invalid">Add</button>
 </form>
