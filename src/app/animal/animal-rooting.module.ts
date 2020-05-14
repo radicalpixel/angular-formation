@@ -14,8 +14,14 @@ const animalRoutes: Routes = [{
       path: '',
       component: AnimalListComponent
     }, {
-      path: 'form',
+      path: 'new',
       component: AnimalFormComponent,
+    }, {
+      path: 'edit/:id',
+      component: AnimalFormComponent,
+      resolve: {
+        animal: AnimalDetailResolverService
+      }
     }, {
       path: ':id',
       component: AnimalDetailComponent,

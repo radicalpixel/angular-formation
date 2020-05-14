@@ -1,9 +1,16 @@
-<form (ngSubmit)="onSubmit()">
-    <input placeholder="Nom" name="name" [(ngModel)]="animal.name">
-    <!-- combobox ?-->
-    <input placeholder="Espèce" name="specie" [(ngModel)]="animal.species">
-    <!-- combobox ?-->
-    <input placeholder="Vétérinaire" name="veteriarian" [(ngModel)]="animal.veterinarian">
-    <input placeholder="Commentaire" name="comment" [(ngModel)]="animal.comment">
-    <button type="submit">Add</button>
+<form #animalForm="ngForm" (ngSubmit)="onSubmit()">
+    <input placeholder="Name" name="name" [(ngModel)]="animal.name"  #name="ngModel" required/>
+    <p *ngIf="name.errors?.required">Please fill in the animal name</p>
+
+    <input placeholder="Specie" name="species" [(ngModel)]="animal.species" #species="ngModel" required/>
+    <p *ngIf="species.errors?.required">Please fill in the animal specie</p>
+    
+    <select name="veterinarian" [(ngModel)]="animal.veterinarian" #veterinarian="ngModel" required>
+        <option *ngFor="let vet of veterinarians" [value]="getVetName(vet)">{{getVetName(vet)}}</option>
+    </select>
+    <p *ngIf="veterinarian.errors?.required">Please select a veterinarian</p>
+    
+    <textarea placeholder="Comment" name="comment" [(ngModel)]="animal.comment"></textarea>
+    
+    <button type="submit" [disabled]="animalForm.form.invalid">Add</button>
 </form>

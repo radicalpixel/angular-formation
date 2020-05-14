@@ -23,6 +23,10 @@ export class AnimalService {
     return this.client.post<Animal>("/api/animals", animal)
   }
 
+  update(animal: Animal): Observable<Animal> {
+    return this.client.put<Animal>(`/api/animals/${animal.id}`, animal)
+  }
+
   delete(animal: Animal): Observable<void> {
     return this.client.delete<void>(`/api/animals/${animal.id}`)
   }

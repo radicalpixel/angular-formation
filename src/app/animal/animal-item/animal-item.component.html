@@ -8,4 +8,5 @@
         <span class="value">{{animal.species}}</span>
     </label>
     <button class="action" (click)="onDeleteClick()">delete</button>
+    <button class="action" [routerLink]="['/animals/edit',animal.id]">edit</button>
 </p>

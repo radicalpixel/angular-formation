@@ -1,17 +1,10 @@
 {
   "animals": [
     {
-      "id": 1,
-      "name": "Idéfix",
-      "species": "dog",
-      "veterinarian": "Panoramix D'Armorique",
-      "comment": "Développe une allergie à la potion magique."
-    },
-    {
       "id": 2,
       "name": "Chatbus",
       "species": "cat",
-      "veterinarian": "Ged Épervier",
+      "veterinarian": "Panoramix D'Armorique",
       "comment": "Faire prendre rdv 1 mois au moins en avance afin de pouvoir réserver le hangar du mécaniste voisin."
     },
     {
@@ -24,9 +17,16 @@
     {
       "name": "Baghera",
       "species": "cat",
-      "veterinarian": "Mowgli",
+      "veterinarian": "Ged Épervier",
       "comment": "trois vives panthères...",
       "id": 4
+    },
+    {
+      "name": "testNAme",
+      "species": "testSpecies",
+      "veterinarian": "",
+      "comment": "testComment",
+      "id": 5
     }
   ],
   "veterinarians": [
