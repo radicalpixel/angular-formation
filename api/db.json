@@ -23,8 +23,8 @@
     },
     {
       "name": "testNAme",
-      "species": "testSpecies",
-      "veterinarian": "",
+      "species": "dog",
+      "veterinarian": "Panoramix D'Armorique",
       "comment": "testComment",
       "id": 5
     }

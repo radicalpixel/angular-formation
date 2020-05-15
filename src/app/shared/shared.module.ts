@@ -4,6 +4,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { TruncatePipe } from './pipes/truncate.pipe';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ChronometersInterceptor } from './interceptors/chronometers.interceptor';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ChronometersInterceptor } from './interceptors/chronometers.interceptor
   ],
   exports: [
     HighlightDirective,
+    TranslateModule,
     TruncatePipe
   ],
   providers: [

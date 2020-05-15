@@ -8,6 +8,7 @@ import { VeterinarianItemComponent } from './veterinarian-item/veterinarian-item
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { VeterinarianFormComponent } from './veterinarian-form/veterinarian-form.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -22,7 +23,10 @@ import { VeterinarianFormComponent } from './veterinarian-form/veterinarian-form
     CommonModule,
     SharedModule,
     ReactiveFormsModule,
-    VeterinarianRootingModule
+    VeterinarianRootingModule,
+    TranslateModule.forChild({
+      extend: true
+    })
   ],
 })
 export class VeterinarianModule { }

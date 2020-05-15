@@ -1,0 +1,17 @@
+{
+    "animal": {
+        "item": {
+            "species": {
+                "cat": "chat",
+                "dog": "chient",
+                "fox-squirrel": "écureuil renard"
+            },
+            "action": {
+                "detail": "Détail",
+                "edit": "Editer",
+                "delete": "Supprimer"
+            }
+        }
+    },
+    "test": "fr-test"
+}

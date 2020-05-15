@@ -1,0 +1,17 @@
+{
+    "animal": {
+        "item": {
+            "species": {
+                "cat": "cat",
+                "dog": "dog",
+                "fox-squirrel": "fox-squirrel"
+            },
+            "action": {
+                "detail": "Detail",
+                "edit": "Edit",
+                "delete": "Delete"
+            }
+        }
+    },
+    "test": "en-test"
+}
