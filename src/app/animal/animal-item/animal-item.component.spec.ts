@@ -16,6 +16,13 @@ describe('AnimalItemComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AnimalItemComponent);
     component = fixture.componentInstance;
+    component.animal = {
+      "id": 3,
+      "name": "Teto",
+      "species": "fox-squirrel",
+      "veterinarian": "Ged Épervier",
+      "comment": "Très agité."
+    }
     fixture.detectChanges();
   });
 

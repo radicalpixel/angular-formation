@@ -16,6 +16,11 @@ describe('VeterinarianItemComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(VeterinarianItemComponent);
     component = fixture.componentInstance;
+    component.veterinarian = {
+      "id": 1,
+      "firstName": "Panoramix",
+      "lastName": "D'Armorique"
+    }
     fixture.detectChanges();
   });
 

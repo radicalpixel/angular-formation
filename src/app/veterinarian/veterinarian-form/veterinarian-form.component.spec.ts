@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { VeterinarianFormComponent } from './veterinarian-form.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('VeterinarianFormComponent', () => {
   let component: VeterinarianFormComponent;
@@ -8,7 +9,8 @@ describe('VeterinarianFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VeterinarianFormComponent ]
+      imports: [HttpClientTestingModule, RouterTestingModule],
+      declarations: [ VeterinarianFormComponent ],
     })
     .compileComponents();
   }));

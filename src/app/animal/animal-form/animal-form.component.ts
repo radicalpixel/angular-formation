@@ -20,7 +20,7 @@ export class AnimalFormComponent implements OnInit {
     private animalService: AnimalService,
     private route: ActivatedRoute,
     private router: Router
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.route.data.subscribe({
