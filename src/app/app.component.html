@@ -1,9 +1,8 @@
-<h1>{{ title }}App</h1>
-
-<p>
-    <a routerLink="/">Animals</a>
-    <a routerLink="/veterinarians">Veterinarians</a>
-</p>
-<p>
-    <router-outlet></router-outlet>
-</p>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>{{ title }}App</span>
+        <span><a routerLink="/">Animals</a></span>
+        <span><a routerLink="/veterinarians">Veterinarians</a></span>
+    </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>

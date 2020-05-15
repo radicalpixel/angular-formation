@@ -1,16 +1,4 @@
-p {
-    display: flex;
-    flex-direction: column
-}
-
-.title {
-    font-weight: bold;
-}
-
-.value {
-    font-style: italic;
-}
-
-.action {
-    width: min-content;
+mat-card {
+    width: 400px;
+    margin: 12px;
 }

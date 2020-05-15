@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button'
 import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { SharedModule } from '../shared/shared.module';
 import { AnimalListComponent } from './animal-list/animal-list.component';
@@ -23,6 +25,8 @@ import { AnimalFormComponent } from './animal-form/animal-form.component';
     SharedModule,
     FormsModule,
     AnimalRootingModule,
+    MatCardModule,
+    MatButtonModule,
   ]
 })
 export class AnimalModule { }

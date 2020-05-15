@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AnimalModule } from './animal/animal.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -12,7 +14,9 @@ import { AnimalModule } from './animal/animal.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AnimalModule
+    AnimalModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

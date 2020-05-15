@@ -1,3 +1,4 @@
+<h2>Animal edit:</h2>
 <form #animalForm="ngForm" (ngSubmit)="onSubmit()">
     <input placeholder="Name" name="name" [(ngModel)]="animal.name"  #name="ngModel" required/>
     <p *ngIf="name.errors?.required">Please fill in the animal name</p>
